@@ -1,0 +1,279 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.logo h1 {
+    font-size: 20px;
+    color: #1a5a96;
+    font-weight: 700;
+}
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.nav a.active {
+    color: #1a5a96;
+}
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.whatsapp-btn {
+    background: #25D366;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.primary-btn {
+    background: #1a5a96;
+    color: #fff;
+}
+.secondary-btn {
+    background: transparent;
+    color: #1a5a96;
+    border: 1px solid #1a5a96;
+    margin-left: 15px;
+}
+
+/* Banner区 */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+}
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* 产品分类区 */
+.product-categories {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 50px;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.category-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.category-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.category-card h3 {
+    color: #1a5a96;
+    margin-bottom: 15px;
+}
+.category-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #1a5a96;
+    text-decoration: none;
+}
+
+/* 核心优势区 */
+.advantages {
+    padding: 80px 0;
+}
+.advantages-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.advantages-list {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2.5;
+}
+.advantages-image img {
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* 热门产品区 */
+.featured-products {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.product-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 应用场景区 */
+.applications {
+    padding: 80px 0;
+}
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.application-item {
+    background: #1a5a96;
+    color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* 联系我们区 */
+.contact {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+.contact-info {
+    flex: 1;
+}
+.contact-info p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* 页脚 */
+.footer {
+    background: #1a5a96;
+    color: #fff;
+    padding: 50px 0 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 2;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 响应式适配 */
+@media (max-width: 992px) {
+    .category-grid, .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantages-content, .contact-content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 576px) {
+    .category-grid, .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav {
+        display: none;
+    }
+    .banner h2 {
+        font-size: 28px;
+    }
+}
