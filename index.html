@@ -2,194 +2,474 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubei Zhongrou Special Cable | Custom Industrial Cables</title>
-    <meta name="description" content="Professional manufacturer of high-temperature, fluoroplastic, and custom special cables for industrial, automotive, and energy applications. ISO & CE certified.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hubei Zhongrou | Special Cable Manufacturer for Harsh Environments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1e2a3a;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #eef2f5; }
+        ::-webkit-scrollbar-thumb { background: #0F6E8C; border-radius: 10px; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #eef2f8;
+            transition: 0.3s;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0F6E8C, #29B2B2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: 0.2s;
+        }
+        .nav-links a:hover { color: #0F6E8C; }
+        .contact-nav {
+            background: #0F6E8C;
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 40px;
+        }
+
+        /* Hero Section: Left content + Right Inquiry Form */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5faff 0%, #eef6fc 100%);
+            display: flex;
+            align-items: center;
+            margin-top: 70px;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-left h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0F2B3A;
+            margin-bottom: 24px;
+        }
+        .hero-left h1 span {
+            color: #29B2B2;
+        }
+        .hero-left p {
+            font-size: 1.1rem;
+            color: #4a627a;
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .stat-block h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0F6E8C;
+        }
+        .btn-group {
+            display: flex;
+            gap: 20px;
+        }
+        .btn-primary {
+            background: #0F6E8C;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .btn-outline {
+            border: 1px solid #0F6E8C;
+            background: transparent;
+            color: #0F6E8C;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn-primary:hover, .btn-outline:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -12px rgba(0,0,0,0.15);
+        }
+
+        /* Right Inquiry Card */
+        .inquiry-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+            border: 1px solid #e2edf5;
+        }
+        .inquiry-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #0F2B3A;
+        }
+        .inquiry-card p {
+            color: #5c6f87;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+        .inquiry-form .form-group {
+            margin-bottom: 18px;
+        }
+        .inquiry-form input, .inquiry-form select, .inquiry-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 28px;
+            border: 1px solid #dce5ed;
+            background: #ffffff;
+            font-size: 0.9rem;
+        }
+        .inquiry-form input:focus, .inquiry-form select:focus, .inquiry-form textarea:focus {
+            border-color: #29B2B2;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(41,178,178,0.1);
+        }
+        .submit-small {
+            background: #0F6E8C;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+        }
+        .emergency-contact {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5c6f87;
+            border-top: 1px solid #eef2f8;
+            padding-top: 18px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0F2B3A;
+        }
+        .section-sub {
+            text-align: center;
+            color: #5c6f87;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 1.1rem;
+        }
+
+        /* Product Grid with images */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border: 1px solid #edf2f7;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -15px rgba(0, 110, 140, 0.15);
+        }
+        .product-img {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+        }
+        .product-info {
+            padding: 28px;
+        }
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .product-tag {
+            display: inline-block;
+            background: #e3f0f5;
+            color: #0F6E8C;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #2c3f4f;
+            margin-bottom: 24px;
+        }
+        .history-badge {
+            background: #f4f9fe;
+            padding: 20px;
+            border-radius: 28px;
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+        }
+        .gallery-item {
+            height: 260px;
+            border-radius: 28px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0F2B3A;
+            color: #bdd3df;
+            padding: 50px 0 30px;
+            margin-top: 60px;
+        }
+        @media (max-width: 900px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-stats, .btn-group {
+                justify-content: center;
+            }
+            .about-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .container { padding: 0 24px; }
+            .section { padding: 60px 0; }
+        }
+    </style>
 </head>
 <body>
-    <!-- 顶部导航栏 -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Hubei Zhongrou Cable</h1>
+
+<div class="navbar">
+    <div class="nav-container">
+        <div class="logo">HUBEI ZHONGROU</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">Company</a>
+            <a href="#gallery">Factory</a>
+            <a href="#inquiry" class="contact-nav">Get Quote</a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero with left text + right inquiry form -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-left" data-aos="fade-up">
+            <h1>Special Cables for <span>Harsh Environments</span></h1>
+            <p>Zero-buoyancy cables · High-flex drag chains · Robot cables · Subsea cables — trusted by global industries for reliable power and signal transmission.</p>
+            <div class="btn-group">
+                <a href="#products" class="btn-primary">Explore Products →</a>
+                <a href="#about" class="btn-outline">About Zhongrou</a>
             </div>
-            <nav class="nav">
-                <a href="#home" class="active">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About Us</a>
-                <a href="#applications">Applications</a>
-                <a href="#contact">Contact Us</a>
-            </nav>
-            <div class="contact-header">
-                <p>+86 15827548986</p>
-                <a href="https://wa.me/8615827548986" class="whatsapp-btn">WhatsApp</a>
+            <div class="hero-stats">
+                <div class="stat-block"><h3 class="counter" data-target="15">0</h3><p>Years Experience</p></div>
+                <div class="stat-block"><h3 class="counter" data-target="120">0</h3><p>+ Cable Types</p></div>
+                <div class="stat-block"><h3 class="counter" data-target="25">0</h3><p>Export Countries</p></div>
             </div>
         </div>
-    </header>
-
-    <!-- 首页Banner -->
-    <section class="banner" id="home">
-        <div class="container">
-            <div class="banner-content">
-                <h2>High-Performance Special Cables for Harsh Environments</h2>
-                <p>ISO 9001 & CE Certified | Custom Solutions | Professional Manufacturing Experience</p>
-                <div class="banner-buttons">
-                    <a href="#contact" class="btn primary-btn">Get Free Quote</a>
-                    <a href="#products" class="btn secondary-btn">View Products</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 产品分类区 -->
-    <section class="product-categories">
-        <div class="container">
-            <h2 class="section-title">Our Product Categories</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-icon">🔌</div>
-                    <h3>High-Temperature Resistant Cables</h3>
-                    <p>Rated up to 250°C, ideal for industrial furnaces and heating equipment.</p>
-                    <a href="#" class="category-link">View Details →</a>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">⚗️</div>
-                    <h3>Fluoroplastic Insulated Cables</h3>
-                    <p>Corrosion & chemical resistant, suitable for chemical and marine applications.</p>
-                    <a href="#" class="category-link">View Details →</a>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🚗</div>
-                    <h3>Custom Wiring Harnesses</h3>
-                    <p>Customized for automotive, aerospace, and industrial equipment.</p>
-                    <a href="#" class="category-link">View Details →</a>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">⚡</div>
-                    <h3>Special Power Cables</h3>
-                    <p>Low-smoke, halogen-free, flame-retardant options for energy projects.</p>
-                    <a href="#" class="category-link">View Details →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 核心优势区 -->
-    <section class="advantages" id="about">
-        <div class="container">
-            <div class="advantages-content">
-                <div class="advantages-text">
-                    <h2 class="section-title">Why Choose Zhongrou?</h2>
-                    <ul class="advantages-list">
-                        <li>✅ Direct Factory Price with No Middlemen</li>
-                        <li>✅ Strict ISO & CE Quality Control</li>
-                        <li>✅ Custom OEM/ODM Services Available</li>
-                        <li>✅ Fast Delivery & Flexible MOQ</li>
-                        <li>✅ 24/7 Technical Support & After-Sales Service</li>
-                    </ul>
-                </div>
-                <div class="advantages-image">
-                    <img src="factory.jpg" alt="Hubei Zhongrou Factory" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 热门产品区 -->
-    <section class="featured-products" id="products">
-        <div class="container">
-            <h2 class="section-title">Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="product1.jpg" alt="High Temperature Silicone Cable" />
-                    <h3>Silicone Rubber High-Temperature Cable</h3>
-                    <p>Model: ZR-SI-200 | Rated Temp: -60°C ~ +200°C</p>
-                    <a href="#" class="btn primary-btn">Inquire Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product2.jpg" alt="PTFE Insulated Cable" />
-                    <h3>PTFE Insulated Special Cable</h3>
-                    <p>Model: ZR-PTFE-260 | Rated Temp: -200°C ~ +260°C</p>
-                    <a href="#" class="btn primary-btn">Inquire Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="Custom Wiring Harness" />
-                    <h3>Custom Automotive Wiring Harness</h3>
-                    <p>Customizable to Your Specifications</p>
-                    <a href="#" class="btn primary-btn">Inquire Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 应用场景区 -->
-    <section class="applications" id="applications">
-        <div class="container">
-            <h2 class="section-title">Applications</h2>
-            <div class="applications-grid">
-                <div class="application-item">Industrial Equipment</div>
-                <div class="application-item">Automotive Industry</div>
-                <div class="application-item">Renewable Energy</div>
-                <div class="application-item">Chemical & Petrochemical</div>
-                <div class="application-item">Aerospace & Defense</div>
-                <div class="application-item">Marine & Offshore</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系我们区 -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="section-title">Contact Us</h2>
-                    <p><strong>Company:</strong> Hubei Zhongrou Special Cable Co., Ltd.</p>
-                    <p><strong>Email:</strong> sylvia@yizhongrou.com</p>
-                    <p><strong>Mobile / WhatsApp / WeChat:</strong> +86 15827548986</p>
-                    <p><strong>Working Hours:</strong> Mon-Fri 8:30-17:30 (GMT+8)</p>
-                </div>
-                <form action="https://formsubmit.co/sylvia@yizhongrou.com" method="POST" class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="company" placeholder="Company Name">
-                    <textarea name="message" placeholder="Your Inquiry (e.g., Product Model, Quantity, Application)" required></textarea>
-                    <button type="submit" class="btn primary-btn">Send Inquiry</button>
+        <div data-aos="fade-left">
+            <div class="inquiry-card">
+                <h3>Request a Custom Solution</h3>
+                <p>Get a quote within 24 hours</p>
+                <form class="inquiry-form" action="#" method="post">
+                    <div class="form-group"><input type="text" placeholder="Full Name *" required></div>
+                    <div class="form-group"><input type="email" placeholder="Email *" required></div>
+                    <div class="form-group"><input type="tel" placeholder="WhatsApp / WeChat (optional)"></div>
+                    <div class="form-group">
+                        <select>
+                            <option>Select product series</option>
+                            <option>Robot Cables</option>
+                            <option>High-Flex Drag Chain Cables</option>
+                            <option>Zero-Buoyancy / Subsea Cables</option>
+                            <option>Other Special Cables</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><textarea rows="3" placeholder="Tell us your application, length, certifications..."></textarea></div>
+                    <button type="submit" class="submit-small">Send Inquiry →</button>
                 </form>
+                <div class="emergency-contact">
+                    <i class="fas fa-phone-alt"></i> Urgent: <strong>+86 158 2754 8986</strong> (WhatsApp/WeChat)<br>
+                    <i class="fas fa-envelope"></i> sylvia@yizhongrou.com
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Hubei Zhongrou Special Cable Co., Ltd.</h3>
-                    <p>Your Reliable Partner for Special Cables & Wiring Harnesses</p>
+<!-- Products Section with multiple images -->
+<section id="products" class="section container">
+    <div data-aos="fade-up"><div class="section-title">Core Product Series</div><div class="section-sub">Engineered for extreme applications | CE / UL / CCC certified | Fully customizable</div></div>
+    <div class="product-grid">
+        <div class="product-card" data-aos="flip-up">
+            <div class="product-img" style="background-image: url('https://placehold.co/600x400/89cff0/white?text=Robot+Cable+Image');"></div>
+            <div class="product-info"><span class="product-tag">High Flexibility</span><h3>Robot Cables</h3><p>10 million bending cycles, torsion resistant, ideal for industrial robots and automation lines.</p></div>
+        </div>
+        <div class="product-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="product-img" style="background-image: url('https://placehold.co/600x400/6bb5d9/white?text=Drag+Chain+Cable');"></div>
+            <div class="product-info"><span class="product-tag">Long Life</span><h3>High-Flex Drag Chain Cables</h3><p>Imported materials, >20 million drag chain cycles, oil & abrasion resistant.</p></div>
+        </div>
+        <div class="product-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="product-img" style="background-image: url('https://placehold.co/600x400/4e9fc7/white?text=Subsea+Cable');"></div>
+            <div class="product-info"><span class="product-tag">Underwater Special</span><h3>Zero-Buoyancy & Watertight Cables</h3><p>Density adjustable, withstand 300m water pressure, integrated power & signal, for ROVs and deep-sea exploration.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- About + History with images (factory image replaced) -->
+<section id="about" class="section container">
+    <div class="about-grid">
+        <div data-aos="fade-right">
+            <div class="section-title" style="text-align: left;">About Zhongrou</div>
+            <div class="about-text">
+                <p>Hubei Zhongrou Special Cable Co., Ltd. is located in Wuhan Hannan "China Auto Valley". We are a high-tech enterprise integrating R&D, production and sales of special cables. Certified with ISO9001, CCC, CE, we serve marine engineering, industrial robotics, new energy equipment and rail transit.</p>
+                <p>Our mission is to solve cable challenges under extreme conditions. We provide fast customization and reliable quality.</p>
+                <div class="history-badge">
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Beijing Xiangyun</strong> predecessor founded in <strong>2009</strong></p>
+                    <p><i class="fas fa-factory"></i> <strong>Wuhan Factory</strong> established in <strong>2022</strong> (smart manufacturing base)</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Email: sylvia@yizhongrou.com</p>
-                    <p>WhatsApp/WeChat: +86 15827548986</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Hubei Zhongrou Special Cable Co., Ltd. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>
+        <div data-aos="fade-left">
+            <!-- 此处为替换的第一张图片 -->
+            <img src="https://github.com/guihaokeji/hubeizhongrou.github.io/blob/main/%E5%B7%A5%E5%8E%82%E5%AE%9E%E6%99%AF.png?raw=true" style="width:100%; border-radius: 32px; object-fit: cover;">
+        </div>
+    </div>
+</section>
+
+<!-- Factory Gallery (more images) -->
+<section id="gallery" class="section container">
+    <div data-aos="fade-up"><div class="section-title">Smart Manufacturing · Strict Quality Control</div><div class="section-sub">From raw materials to finished cables, every meter ensures safety and reliability.</div></div>
+    <div class="gallery-grid">
+        <!-- 此处为替换的第二张图片 -->
+        <div class="gallery-item" style="background-image: url('https://github.com/guihaokeji/hubeizhongrou.github.io/blob/main/%E7%94%9F%E4%BA%A7%E8%AE%BE%E5%A4%872.png?raw=true');" data-aos="zoom-in"></div>
+        <div class="gallery-item" style="background-image: url('https://placehold.co/800x600/c9dfea/white?text=Quality+Lab');" data-aos="zoom-in" data-aos-delay="100"></div>
+        <div class="gallery-item" style="background-image: url('https://placehold.co/800x600/b8d4e2/white?text=Automated+Equipment');" data-aos="zoom-in" data-aos-delay="200"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+            <div><h3 style="color: white;">Hubei Zhongrou Special Cable</h3><p>R&D & Manufacturing Base</p></div>
+            <div><i class="fas fa-map-marker-alt"></i> Building 32, Liandong U Valley, 259 Xingsan Road, Hannan District, Wuhan, China</div>
+            <div><i class="fab fa-whatsapp"></i> +86 158 2754 8986<br><i class="fas fa-envelope"></i> sylvia@yizhongrou.com</div>
+        </div>
+        <div style="text-align: center; margin-top: 48px;">© 2026 Hubei Zhongrou Special Cable Co., Ltd. | ICP: 鄂ICP备2023016828号-1</div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = +el.getAttribute('data-target');
+                let current = 0;
+                const step = target / 45;
+                const interval = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        el.innerText = target;
+                        clearInterval(interval);
+                    } else {
+                        el.innerText = Math.floor(current);
+                    }
+                }, 25);
+                counterObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+</script>
 </body>
 </html>
